@@ -1,0 +1,38 @@
+{
+  "name": "wordpress/composer",
+  "description": "WordPress with Composer.",
+  "type": "project",
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "Nicholas Bourne",
+      "email": "info@nmrb.co.uk"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+    "wordpress-install-dir": "core",
+    "installer-paths": {
+      "app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "app/mu-plugins/{$name}": ["type:wordpress-muplugin"],
+      "app/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  },
+  "require": {
+    "composer/installers": "^v1.3",
+    "johnpbloch/wordpress": "^4.9",
+    "wpackagist-plugin/contact-form-7": "^4.9",
+    "wpackagist-plugin/wordpress-seo": "^7.9",
+    "wpackagist-plugin/wordfence": "^6.3"
+  },
+  "require-dev": {
+    "twbs/bootstrap": "^4.0",
+    "components/jquery": "^3.3",
+    "soerenkroell/composer-slick": "^1.5"
+  }
+}

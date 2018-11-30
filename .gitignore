@@ -1,0 +1,7 @@
+/vendor/
+/core/
+composer.lock
+package.lock
+
+/app/plugins
+/app/uploads
